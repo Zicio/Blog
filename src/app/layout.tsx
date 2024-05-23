@@ -26,13 +26,13 @@ export default function RootLayout({
     <html lang="ru">
       <body
         className={cn(
-          'dark min-h-screen bg-background p-4 font-sans antialiased',
+          'dark min-h-screen bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >
         <Header />
-        <Footer />
         {children}
+        <Footer />
       </body>
     </html>
   );
