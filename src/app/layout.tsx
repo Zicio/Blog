@@ -24,14 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className={cn(
-          'dark min-h-screen bg-background font-sans antialiased',
+          'dark flex min-h-screen flex-col bg-background font-sans antialiased',
           fontSans.variable,
         )}
       >
         <Header />
-        {children}
+        <div className="flex-grow p-4 text-sm text-secondary">{children}</div>
         <Footer />
       </body>
     </html>

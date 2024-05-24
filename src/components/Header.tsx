@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logoImage from '../../public/redbull-logo-svgrepo-com.svg';
 import { Button } from '@/components/ui/button';
+import Navigation from './Navigation';
 
 const Header = () => {
   const isAuth = false;
@@ -11,6 +12,7 @@ const Header = () => {
       <Link href={'/'}>
         <Image src={logoImage} width={100} height={100} alt="Логотип" />
       </Link>
+      <Navigation />
       {isAuth ? (
         <Avatar className="cursor-pointer">
           <AvatarImage src=",,," alt="@shadcn" width={30} height={30} />
@@ -18,7 +20,7 @@ const Header = () => {
         </Avatar>
       ) : (
         <Button asChild>
-          <Link href="/login" className="font-bold">
+          <Link href="/login" className="text-base font-bold">
             Login
           </Link>
         </Button>
